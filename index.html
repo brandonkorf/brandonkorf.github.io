@@ -9,50 +9,27 @@
 <body>
 	<h1>Pro Services</h1>
 	
-	<h2>Order ID</h2>
-	<div>
-		<input type="text" name="orderID">
-	</div>
-	
-	<h2>Address 1</h2>
-	<div>
-		<input id="autoAddress1" type="text" name="address1">
-	</div>
-	
-	<h2>Address 2</h2>
-	<div>
-		<input id="autoAddress2" type="text" name="address2">
-	</div>
-	
-	<h2>City</h2>
-	<div>
-		<input id="autoCity" type="text" name="city">
-	</div>
-	
-	<h2>State</h2>
-	<div>
-		<input id="autoState" type="text" name="state">
-	</div>
-	
-	<h2>Zip</h2>
-	<div>
-		<input id="autoZip" type="number" name="zip">
-	</div>
-	
-	<h2>Date</h2>
-	<div>
-		<input id="date" type="text" name="date">
-	</div>
-	
-	<h2>Number of Pieces</h2>
-	<div>
-		<input id="autoNumPieces" type="number" name="numPieces">
-	</div>
-	
-	<h2>Skew</h2>
-	<div>
-		<input id="autoSkew" type="text" name="skew">
-	</div>
+	<form>
+		Order ID: <input type="text" name="orderID">
+		<br/>
+		Address 1<input id="autoAddress1" type="text" name="address1">
+		<br/>
+		Address 2<input id="autoAddress2" type="text" name="address2">
+		<br/>
+		City<input id="autoCity" type="text" name="city">
+		<br/>
+		State<input id="autoState" type="text" name="state">
+		<br/>
+		Zip<input id="autoZip" type="number" name="zip">
+		<br/>
+		Date<input id="date" type="text" name="date">
+		<br/>
+		Number of Pieces<input id="autoNumPieces" type="number" name="numPieces">
+		<br/>
+		Skew: <input id="autoSkew" type="text" name="skew">
+		<br/>
+		<input type="submit" value="Future Submit">
+	</form>
 	
 	
 	<script>
@@ -83,8 +60,56 @@
 		});
 		
 		var availableState = [
+		"Alabama",
+		"Alaska",
+		"Arizona",
+		"Arkansas",
+		"California", 
 		"Colorado",
-		"New Mexico"
+		"Connecticut", 
+		"Delaware",
+		"Florida",
+		"Georgia",
+		"Hawaii",
+		"Idaho",
+		"Illinois",
+		"Indiana", 
+		"Iowa", 
+		"Kansas",
+		"Kentucky", 
+		"Louisiana",
+		"Maine",
+		"Maryland", 
+		"Massachusetts", 
+		"Michigan",
+		"Minnesota",
+		"Mississippi", 
+		"Missouri",
+		"Montana",
+		"Nebraska", 
+		"Nevada",
+		"New Hampshire", 
+		"New Jersey",
+		"New Mexico",
+		"New York",
+		"North Carolina", 
+		"North Dakota",
+		"Ohio",
+		"Oklahoma", 
+		"Oregon",
+		"Pennsylvania",
+		"Rhode Island",
+		"South Carolina",
+		"South Dakota",
+		"Tennessee",
+		"Texas",
+		"Utah",
+		"Vermont", 
+		"Virginia",
+		"Washington", 
+		"West Virginia", 
+		"Wisconsin",
+		"Wyoming"
 		];
 		$( "#autoState" ).autocomplete({
 			source: availableState
@@ -107,11 +132,11 @@
 		"Dishwasher Complete Installation",
 		"Fridge Pick-up"
 		];
-		$( "#autoState" ).autocomplete({
-			source: availableState
+		$( "#autoSkew" ).autocomplete({
+			source: availableSkew
 		});
 	
-		$.getJSON("./sample.json", function(json) {
+		/*$.getJSON("./sample.json", function(json) {
 			console.log(json.length);
 			for(var i = 0; i < json.length; i++) {
 				var obj = json[i];
@@ -123,7 +148,7 @@
 		.success(function() { console.log("success"); })
 		.error(function() { console.log("error"); })
 		.complete(function() { console.log("complete"); });
-		
+		*/
 		
 	</script>
 </body>
