@@ -10,11 +10,13 @@
 	<h1>Pro Services</h1>
 	<script>
 		$.getJSON("sample.json", function(json) {
+			console.log(json.length);
 			for(var i = 0; i < json.length; i++) {
 				var obj = json[i];
 
 				console.log(obj.id);
 			}
+			console.log("end");
 		});
 	</script>
 </body>
