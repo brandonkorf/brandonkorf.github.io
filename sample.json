@@ -1,4 +1,4 @@
-{
+[
 	{
 		"id": "1",
 		"address1": "123 Sample Ave."
@@ -29,4 +29,4 @@
 		"numpieces": "3",
 		"Skew": "Sample Skew"
 	}
-}
+]
