@@ -9,7 +9,7 @@
 <body>
 	<h1>Pro Services</h1>
 	<script>
-		$.getJSON("sample.json", function(json) {
+		$.getJSON("./sample.json", function(json) {
 			console.log(json.length);
 			for(var i = 0; i < json.length; i++) {
 				var obj = json[i];
@@ -17,8 +17,10 @@
 				console.log(obj.id);
 			}
 			console.log("end");
-		});
-		
+		})
+		.success(function() { console.log("success"); })
+		.error(function() { console.log("error"); })
+		.complete(function() { console.log("complete"); });
 	</script>
 </body>
 </html>
