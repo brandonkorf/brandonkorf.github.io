@@ -6,6 +6,7 @@
 		"city": "Rio Rancho",
 		"state": "New Mexico",
 		"zip": "87124",
+		"date": "12/25/1986",
 		"numpieces": "6",
 		"Skew": "Sample Skew"
 	}
@@ -16,8 +17,9 @@
 		"city": "Albuquerque",
 		"state": "New Mexico",
 		"zip": "87156",
+		"date": "01/19/1992",
 		"numpieces": "1",
-		"Skew": "Sample Skew"
+		"Skew": "Dishwasher Complete Installation"
 	}
 	{
 		"id": "3",
@@ -26,7 +28,8 @@
 		"city": "Denver",
 		"state": "Colorado",
 		"zip": "84201",
+		"date": "02/29/2016",
 		"numpieces": "3",
-		"Skew": "Sample Skew"
+		"Skew": "Fridge Pick-up"
 	}
 ]

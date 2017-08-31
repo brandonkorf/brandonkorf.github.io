@@ -8,7 +8,109 @@
 </head>
 <body>
 	<h1>Pro Services</h1>
+	
+	<h2>Order ID</h2>
+	<div>
+		<input type="text" name="orderID">
+	</div>
+	
+	<h2>Address 1</h2>
+	<div>
+		<input id="autoAddress1" type="text" name="address1">
+	</div>
+	
+	<h2>Address 2</h2>
+	<div>
+		<input id="autoAddress2" type="text" name="address2">
+	</div>
+	
+	<h2>City</h2>
+	<div>
+		<input id="autoCity" type="text" name="city">
+	</div>
+	
+	<h2>State</h2>
+	<div>
+		<input id="autoState" type="text" name="state">
+	</div>
+	
+	<h2>Zip</h2>
+	<div>
+		<input id="autoZip" type="number" name="zip">
+	</div>
+	
+	<h2>Date</h2>
+	<div>
+		<input id="date" type="text" name="date">
+	</div>
+	
+	<h2>Number of Pieces</h2>
+	<div>
+		<input id="autoNumPieces" type="number" name="numPieces">
+	</div>
+	
+	<h2>Skew</h2>
+	<div>
+		<input id="autoSkew" type="text" name="skew">
+	</div>
+	
+	
 	<script>
+		var availableAddress1 = [
+		"123 Sample Ave.",
+		"987 Real Rd.",
+		"678 Mountain Way"
+		];
+		$( "#autoAddress1" ).autocomplete({
+			source: availableAddress1
+		});
+		
+		var availableAddress2 = [
+		"Apt. #1",
+		"Apt. #E"
+		];
+		$( "#autoAddress2" ).autocomplete({
+			source: availableAddress2
+		});
+		
+		var availableCity = [
+		"Albuquerque",
+		"Denver",
+		"Rio Rancho"
+		];
+		$( "#autoCity" ).autocomplete({
+			source: availableCity
+		});
+		
+		var availableState = [
+		"Colorado",
+		"New Mexico"
+		];
+		$( "#autoState" ).autocomplete({
+			source: availableState
+		});
+		
+		var availableZip = [
+		"87124",
+		"87156",
+		"53703",
+		"53115"
+		];
+		$( "#autoZip" ).autocomplete({
+			source: availableZip
+		});
+		
+		$( "#date" ).datepicker();
+		
+		var availableSkew = [
+		"Skew Sample",
+		"Dishwasher Complete Installation",
+		"Fridge Pick-up"
+		];
+		$( "#autoState" ).autocomplete({
+			source: availableState
+		});
+	
 		$.getJSON("./sample.json", function(json) {
 			console.log(json.length);
 			for(var i = 0; i < json.length; i++) {
@@ -21,6 +123,8 @@
 		.success(function() { console.log("success"); })
 		.error(function() { console.log("error"); })
 		.complete(function() { console.log("complete"); });
+		
+		
 	</script>
 </body>
 </html>
